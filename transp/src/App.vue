@@ -33,12 +33,18 @@
     <div id="fundsInfo" style="display:inline-block;">${{project.current_fund}} out of ${{project.fund_goal}} raised
     <progress style="display:inline-block;float:right;margin-right:150px;" id="file" name="file" :max="project.fund_goal" :value="project.current_fund">
     </progress>
-    <router-link to="/projectDetail" style="color: black"><a class="button3">Donate</a></router-link>
+    <a @click ="project_button(project.projectID)" class="button3">Donate</a>
   </div>
   </div>
   <div id="fundsInfo" style="font-weight:400i">Category: {{project.category}}</div>
 </div>
 <router-view></router-view>
+<div v-if = "is_viewing_funds" style = "display:block;border-radius:0 12 12 0 ;width:49.5%;padding-top:1%;padding-left:1%;padding-right:1%;margin-top:-2px;margin-left:28%;height:150px;background-color:#EEEEEE;">
+  <div class = "listview" style ="height:100px;overflow-y:scroll;">
+    <div v-for = "row in filteredFundArr" style = "position:relative;border-top:1px solid grey;height:55px"><div style = "position:absolute;margin-top:16px;margin-left:5px;display:inline-block;color:black;">{{row.paymentPerson}} payed {{row.payed}}</div>
+    </div>
+  </div>
+</div>
 </div>
 </template>
 
@@ -222,8 +228,8 @@ export default {
   data () {
     return {
       projects: [
-        {title:"Repaint the Walls", fund_goal:900, current_fund:750, thumbnail:"https://s8.postimg.cc/z1q9nwb85/wall1.jpg", days_left:19, projectID:"carpet", mosqueID:"yaseen",category:"Architecture"},
-        {title:"New Basketball Hoop", fund_goal:500, current_fund:25, thumbnail:"https://s15.postimg.cc/ekc0mno23/IMG_4238.jpg", days_left:30, projectID:"basketball", mosqueID:"yaseen", category:"Gym",}
+        {title:"Repaint the Walls", fund_goal:900, current_fund:750, thumbnail:"https://s8.postimg.cc/z1q9nwb85/wall1.jpg", days_left:19, projectID:"walls", mosqueID:"yaseen",category:"Architecture"},
+        {title:"New Basketball Hoop", fund_goal:500, current_fund:200, thumbnail:"https://s15.postimg.cc/ekc0mno23/IMG_4238.jpg", days_left:30, projectID:"basketball", mosqueID:"yaseen", category:"Gym",}
       ],
       mosqueInfo: {
         name:'Yaseen Foundation',
@@ -231,8 +237,53 @@ export default {
         phone: '(650) 591-3690',
         followers: '1,123',
         mosqueID:"yaseen"
+      },
+      funds: [{
+        "id":"walls",
+        "paymentPerson": "Omar",
+        "payed": "150"
+      },
+      {
+        "id":"walls",
+        "paymentPerson": "Mohammed",
+        "payed": "550"
+      },
+      {
+        "id":"walls",
+        "paymentPerson": "Anonymous",
+        "payed": "50"
+      },
+      {
+        "id":"basketball",
+        "paymentPerson": "Shyaan",
+        "payed": "80"
+      },
+      {
+        "id":"basketball",
+        "paymentPerson": "Anonymous",
+        "payed": "120"
       }
+      ],
+      filteredFundArr: [],
+      is_viewing_funds: false
     }
+  },
+  methods: {
+    message: function(i) {
+      console.log(i);
+    },
+    project_button: function (id) {
+      this.filteredFundArr = [];
+       // The button to edit a memo has been pressed.
+       for(var i = 0;i<this.funds.length;i++) {
+         if((this.funds[i].id) == id) {
+           this.filteredFundArr.push(this.funds[i]);
+         }
+       }
+       this.is_viewing_funds = true;
+       console.log(this.filteredFundArr);
+     }
+
   }
 }
 </script>
