@@ -13,18 +13,19 @@
     <div id="subtitle">(650) 591-3690</div>
     <div id="subsubtitle">1,123 followers</div>
   </div>
-  <div>
-    <ul id="navigation_bar">
+  <div >
+    <ul id="navigation_bar" >
     <li>
-       <router-link to="/projects">Projects</router-link>
+       <router-link to="/projects" style="color: black">Projects</router-link>
     </li>
     <li>
-       <router-link to="/performance">Performance</router-link>
+       <router-link to="/performance" style="color: black">Performance</router-link>
     </li>
     <li>
-       <router-link to="/team">Team</router-link>
+       <router-link to="/team" style="color: black">Team</router-link>
     </li>
     </ul>
+
 </div>
 <router-view></router-view>
 </div>
@@ -40,7 +41,8 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,900,900i');
 #navigation_bar {
   width: 100%;
-  background-color:red;
+  color: white;
+  background-color:#FD7057;
   list-style-type:none;
   display: inline-block;
 }
@@ -55,8 +57,8 @@ li {
 }
 
 li:hover {
-  background-color: #bf0000;
-  opacity: 0.6;
+  background-color: white;
+  opacity:0.6;
   transition: 0.3s;
 }
 
@@ -144,7 +146,6 @@ export default {
   name: 'app',
   data () {
     return {
-
       arr: [
       {"name":"Projects", "link":"/projects"},
       {"name":"History", link:"/"},
