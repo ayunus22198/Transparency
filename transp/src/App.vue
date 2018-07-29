@@ -22,7 +22,7 @@
        <router-link to="/performance">Performance</router-link>
     </li>
     <li>
-       <router-link to="/team">Team</router-link>
+       <router-link to="/history">Team</router-link>
     </li>
     </ul>
 </div>
