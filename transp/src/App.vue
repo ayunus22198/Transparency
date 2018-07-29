@@ -19,7 +19,7 @@
        <router-link to="/projects" style="color: black">Projects</router-link>
     </li>
     <li>
-       <router-link to="/performance" style="color: black">Performance</router-link>
+       <router-link to="/performance" style="color: black;">Performance</router-link>
     </li>
     <li>
        <router-link to="/history"style="color: black">Team</router-link>

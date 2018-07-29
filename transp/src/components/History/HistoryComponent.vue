@@ -1,6 +1,6 @@
 <template>
   <div id = "app">
-    <div class = "wrap">
+    <div class = "wrap" style="position:absolute;margin-top:-200px;">
       <div v-for = "admin in admins" v-key:bind = "admin.id" class= "card">
         <div class = "container">
           <h4><b>{{admin.name}}</b></h4>
