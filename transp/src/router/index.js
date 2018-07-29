@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 import Projects from '@/components/Projects/Projects'
 import CreateProject from '@/components/Projects/CreateProject'
 import HistoryComponent from '@/components/History/HistoryComponent'
+import ProjectDetail from '@/components/Projects/projectDetail'
+
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +29,11 @@ export default new Router({
       path: '/history',
       name: 'history',
       component: HistoryComponent
+    },
+    {
+      path: '/projectDetail/:mosqueID/:projectID',
+      name: 'projectDetail',
+      component: ProjectDetail
     }
   ]
 })

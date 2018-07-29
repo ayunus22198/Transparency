@@ -14,7 +14,7 @@
     <div id="subsubtitle">1,123 followers</div>
   </div>
   <div >
-    <ul id="navigation_bar" >
+    <ul id="navigation_bar">
     <li>
        <router-link to="/projects" style="color: black">Projects</router-link>
     </li>
@@ -25,7 +25,6 @@
        <router-link to="/history"style="color: black">Team</router-link>
     </li>
     </ul>
-
 </div>
 <router-view></router-view>
 </div>
@@ -42,9 +41,10 @@ export default {
 #navigation_bar {
   width: 100%;
   color: white;
-  background-color:#FD7057;
+  background-color:#EB5638;
   list-style-type:none;
   display: inline-block;
+  margin: 0;
 }
 
 li {
@@ -64,7 +64,8 @@ li:hover {
 
 *{
   font-family: 'Nunito', sans-serif;
-  color: #FD7057;
+  color: #EB5638;
+  margin: 0;
 }
 
 .header {
@@ -77,7 +78,7 @@ li:hover {
 
 .header a {
   float: left;
-  color: #FD7057;
+  color: #EB5638;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -115,7 +116,7 @@ li:hover {
 
 .header a:hover {
   background-color: #ddd;
-  color: #FD7057;
+  color: #EB5638;
 }
 
 .header a.active {
@@ -146,6 +147,13 @@ export default {
   name: 'app',
   data () {
     return {
+      mosqueInfo: {
+        name:'Yaseen Foundation',
+        address: '1722 Gilbreth Rd, Burlingame, CA 94010',
+        phone: '(650) 591-3690',
+        followers: '1,123',
+        mosqueID:"yaseen"
+      },
       arr: [
       {"name":"Projects", "link":"/projects"},
       {"name":"History", link:"/"},
