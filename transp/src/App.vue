@@ -15,8 +15,14 @@
   </div>
   <div>
     <ul id="navigation_bar">
-    <li v-for="item in arr" v-bind:key = "item.id" >
-       <router-link to="/projects">{{item.name}}</router-link>
+    <li>
+       <router-link to="/projects">Projects</router-link>
+    </li>
+    <li>
+       <router-link to="/performance">Performance</router-link>
+    </li>
+    <li>
+       <router-link to="/team">Team</router-link>
     </li>
     </ul>
 </div>
@@ -138,6 +144,7 @@ export default {
   name: 'app',
   data () {
     return {
+
       arr: [
       {"name":"Projects", "link":"/projects"},
       {"name":"History", link:"/"},
