@@ -23,6 +23,8 @@
     </li>
     <li>
        <router-link to="/team" style="color: black">Team</router-link>
+
+       <router-link to="/history">Team</router-link>
     </li>
     </ul>
 
