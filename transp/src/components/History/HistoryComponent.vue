@@ -19,10 +19,12 @@ export default {
     return {
 
       admins: [
-      {"name":"Adnan Yunus", "PhoneNumber":"(925)-234-8117", "Job":"Web Intern at Gap", "Salary": "75K/year"},
-      {"name":"Shyaan Khan", "PhoneNumber":"-", "Job":"Software Intern at Natix", "Salary": "75K/year"},
-      {"name":"Tariq bhai", "PhoneNumber":"-", "Job":"Founder of startup", "Salary": "75K/year"},
-      {"name":"Tariq bhai", "PhoneNumber":"-", "Job":"Founder of startup", "Salary": "75K/year"}
+      {"name":"Ishaq Asfour", "PhoneNumber":"president@yaseen.org", "Job":"President", "Salary": "75K/year"},
+
+      {"name":"Ziyad Dahbour", "PhoneNumber":"vp@yaseen.org", "Job":"Vice President", "Salary": "75K/year"},
+      {"name":"Qassim Moon", "PhoneNumber":"treasurer@yaseen.org", "Job":"Treasurer", "Salary": "75K/year"},
+      {"name":"Mohammad Bhatti", "PhoneNumber":"secretary@yaseen.org", "Job":"Secretary", "Salary": "75K/year"},
+      {"name":"Kamal Fallaha", "PhoneNumber":"pr@yaseen.org", "Job":"Public Relations", "Salary": "75K/year"}
       ]
     }
   }

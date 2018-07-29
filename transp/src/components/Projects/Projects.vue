@@ -1,6 +1,6 @@
 <template>
   <div id = "app">
-      <div id="projectCard" v-for="(project,i) in projects" v-bind:key="project.id" @click='message(project)'>
+      <div id="projectCard" v-for="(project,i) in projects1" v-bind:key="project.id" @click='message(project)'>
         <img v-bind:src="project.thumbnail" width=100px height=100px style="float:left;border-radius:5px"/>
         <div id="projectTitle">{{project.title}}</div>
         <div>
@@ -10,7 +10,7 @@
           <router-link to="/projectDetail" style="color: black"><a class="button3">Donate</a></router-link>
         </div>
         </div>
-        <div id="fundsInfo" style="font-weight:400i">{{project.days_left}} days remaining</div>
+        <div id="fundsInfo" style="font-weight:400i">Category: {{project.category}}</div>
       </div>
   </div>
 </template>
@@ -101,9 +101,8 @@ export default {
   name: 'app',
   data () {
     return {
-      projects: [
-        {title: "Repaint The Walls", fund_goal:300, current_fund:200, thumbnail: "https://s8.postimg.cc/z1q9nwb85/wall1.jpg", days_left:8, projectID:"walls", mosqueID:"yaseen"},
-        {title:"Fix the carpet", fund_goal:900, current_fund:750, thumbnail:"https://s8.postimg.cc/fvd2ktpmd/carpet1.jpg", days_left:19, projectID:"carpet", mosqueID:"yaseen"}
+      projects1: [
+        {title: "Carpet cleaning", fund_goal:300, current_fund:0, thumbnail: "https://s8.postimg.cc/fvd2ktpmd/carpet1.jpg", days_left:8, category:"Cleaning", projectID:"walls", mosqueID:"yaseen"}
       ],
     }
   },
