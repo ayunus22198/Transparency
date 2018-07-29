@@ -8,6 +8,14 @@
       <a href="#about">About</a>
     </div>
   </div>
+  <div>
+    <ul id="navigation_bar">
+    <li v-for="item in arr" v-bind:key = "item.id" >
+       <router-link to="/projects">{{item.name}}</router-link>
+    </li>
+    </ul>
+</div>
+<router-view></router-view>
 </div>
 </template>
 
@@ -18,6 +26,28 @@ export default {
 </script>
 
 <style>
+
+#navigation_bar {
+  width: 100%;
+  background-color:red;
+  list-style-type:none;
+  display: inline-block;
+}
+
+li {
+    float: left;
+    display:block;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration:none;
+    width: 30%;
+}
+
+li:hover {
+  background-color: #bf0000;
+  opacity: 0.6;
+  transition: 0.3s;
+}
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
@@ -72,3 +102,18 @@ export default {
   }
 }
 </style>
+
+<script>
+export default {
+  name: 'app',
+  data () {
+    return {
+      arr: [
+      {"name":"Projects", "link":"/projects"},
+      {"name":"History", link:"/"},
+      {"name":"About", link: "/"}
+      ]
+    }
+  }
+}
+</script>
