@@ -22,9 +22,7 @@
        <router-link to="/performance" style="color: black">Performance</router-link>
     </li>
     <li>
-       <router-link to="/team" style="color: black">Team</router-link>
-
-       <router-link to="/history">Team</router-link>
+       <router-link to="/history"style="color: black">Team</router-link>
     </li>
     </ul>
 
@@ -40,7 +38,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,900,900i');
 #navigation_bar {
   width: 100%;
   color: white;
